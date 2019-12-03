@@ -18,13 +18,13 @@ def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
 def button_callbackR(channel):
     print("R Button was pushed!")
-    result = client.publish("ButtonPress/Red", "Pressed")
+    result = client.publish("ButtonPress/Red", "Pressed", 2)
 def button_callbackY(channel):
     print("Y Button was pushed!")
-    result = client.publish("ButtonPress/Yellow", "Pressed")
+    result = client.publish("ButtonPress/Yellow", "Pressed", 2)
 def button_callbackB(channel):
     print("B Button was pushed!")
-    result = client.publish("ButtonPress/Blue", "Pressed")
+    result = client.publish("ButtonPress/Blue", "Pressed", 2)
 
 
 client.on_connect = on_connect

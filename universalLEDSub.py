@@ -87,9 +87,9 @@ client.on_message = on_message
 client.connect("192.168.1.230", 1883, 60)
 
 
-client.subscribe("ButtonPress/Blue")
-client.subscribe("ButtonPress/Yellow")
-client.subscribe("ButtonPress/Red")
+client.subscribe("ButtonPress/Blue", 2)
+client.subscribe("ButtonPress/Yellow", 2)
+client.subscribe("ButtonPress/Red", 2)
 #client.connect("192.168.1.230", 1883, 60)
 
 # Blocking call that processes network traffic, dispatches callbacks and
