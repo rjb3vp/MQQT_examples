@@ -1,0 +1,41 @@
+60mA
+
+
+330 ohm resistor?
+
+2.0 volts?
+
+
+
+
+
+aim for 20mA
+
+https://www.evilmadscientist.com/2012/resistors-for-leds/
+
+
+3.3 V GPIO voltage output
+2.0 (Red) voltage drop
+20mA = 0.02A (Red) amperage
+3.3 Volt power source - 2.0 (Red) voltage drop = 1.3 volts
+V=IR
+1.3 V = 0.02 Amps * X Ohms
+Need at least 65 Ohms of resistance
+
+
+3.3 V GPIO voltage output
+2.0 (Yellow) voltage drop
+20mA = 0.02A (Yellow) amperage
+3.3 Volt power source - 2.0 (Yellow) voltage drop = 1.3 volts
+V=IR
+1.3 V = 0.02 Amps * X Ohms
+Need at least 65 Ohms of resistance
+
+
+3.3 V GPIO voltage output
+2.9 (Blue) voltage drop
+20mA = 0.02A (Blue) amperage
+3.3 Volt power source - 2.9 (Blue) voltage drop = 0.4 volts
+V=IR
+0.4 V = 0.02 Amps * X Ohms
+Need at least 20 Ohms of resistance
