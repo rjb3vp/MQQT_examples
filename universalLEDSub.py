@@ -84,8 +84,9 @@ client.on_message = on_message
 #client.on_subscribe = on_subscribe
 
 #client.connect("mqtt.eclipse.org", 1883, 60)
-client.connect("192.168.1.230", 1883, 60)
-
+#client.connect("192.168.1.230", 1883, 60)
+#client.connect("192.168.43.8", 1883, 60)
+client.connect("Meltan", 1883, 60)
 
 client.subscribe("ButtonPress/Blue", 2)
 client.subscribe("ButtonPress/Yellow", 2)
