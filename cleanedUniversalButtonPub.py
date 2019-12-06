@@ -1,4 +1,6 @@
 #https://raspberrypihq.com/use-a-push-button-with-raspberry-pi-gpio/
+#https://pypi.org/project/paho-mqtt/
+#http://www.steves-internet-guide.com/publishing-messages-mqtt-client/
 
 hasGPIO = False
 
@@ -56,29 +58,8 @@ else:
         if (("Y" in response) or ("y" in response)):
             button_callbackY(0)
     client.disconnect()
-#message = input("Press enter to quit\n\n") # Run until someone presses enter
-
-
-#https://pypi.org/project/paho-mqtt/
-#http://www.steves-internet-guide.com/publishing-messages-mqtt-client/
 
 
 
-
-# The callback for when the client receives a CONNACK response from the server.
-
-
-    # Subscribing in on_connect() means that if we lose the connection and
-    # reconnect then subscriptions will be renewed.
-    #client.subscribe("$SYS/#")
-
-# The callback for when a PUBLISH message is received from the server.
-#def on_message(client, userdata, msg):
-    #print(msg.topic+" "+str(msg.payload))
-
-
-#client.on_message = on_message
-
-#client.connect("mqtt.eclipse.org", 1883, 60)
 
 
