@@ -17,6 +17,10 @@ If run on a Raspberry Pi with external hardware, the Python GPIO library must be
 Finally, a MQTT broker must be run.  I recommend installing mosquitto.  
 Make sure that every client.connect function call is connecting to the hostname of the machine running the broker, with the corresponding port (default used in example code).
 
+
+.pcapng files can be viewed with Wireshark - sort for the MQTT protocol.
+
+
 Email rjb3vp@umd.edu with any questions.
 
 
