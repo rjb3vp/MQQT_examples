@@ -32,7 +32,8 @@ def button_callbackB(channel):
 client.on_connect = on_connect
 #client.connect("192.168.43.8", 1883, 60)
 #client.connect("192.168.1.230", 1883, 60)
-client.connect("Meltan", 1883, 60)
+#client.connect("Meltan", 1883, 60)
+client.connect("Melmetal", 1883, 60)
 
 if hasGPIO:
     GPIO.setwarnings(False) # Ignore warning for now

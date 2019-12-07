@@ -1,3 +1,17 @@
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
 #https://pypi.org/project/paho-mqtt/
 #http://www.steves-internet-guide.com/publishing-messages-mqtt-client/
 
@@ -13,10 +27,6 @@ try:
 except ImportError as importError:
     print("Device detected as PC")  
     hasGPIO = False
-
-
-
-
 
 import time
 
@@ -35,7 +45,6 @@ if hasGPIO:
     GPIO.output(redPin,GPIO.LOW)
     GPIO.output(yellowPin,GPIO.LOW)
     GPIO.output(bluePin,GPIO.LOW)
-
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
@@ -75,20 +84,13 @@ def on_message(client, userdata, msg):
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
-#client.on_subscribe = on_subscribe
 
-#client.connect("mqtt.eclipse.org", 1883, 60)
-#client.connect("192.168.1.230", 1883, 60)
-#client.connect("192.168.43.8", 1883, 60)
 client.connect("Meltan", 1883, 60)
 
 client.subscribe("ButtonPress/Blue", 2)
 client.subscribe("ButtonPress/Yellow", 2)
 client.subscribe("ButtonPress/Red", 2)
-#client.connect("192.168.1.230", 1883, 60)
 
-# Blocking call that processes network traffic, dispatches callbacks and
-# handles reconnecting.
 # Other loop*() functions are available that give a threaded interface and a
 # manual interface.
 client.loop_forever()
